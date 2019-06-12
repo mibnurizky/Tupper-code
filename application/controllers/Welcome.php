@@ -21,6 +21,8 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//$this->load->view('welcome_message');
-		print_r(base_assets());
+		//print_r(base_assets());
+		$query = dbQuery("SELECT * FROM users")->result();
+		print_r($query);
 	}
 }
