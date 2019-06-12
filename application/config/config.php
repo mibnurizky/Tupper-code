@@ -25,6 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = '';
 
+$config['api_url'] = '';
+
+$config['api_key'] = '';
+
 /*
 |--------------------------------------------------------------------------
 | Index File
