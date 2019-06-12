@@ -7,7 +7,6 @@
 	}
 
 	function dbInsert($table,$data){
-		$ci = &get_instance();
 		$total = count($data);
 		$no = 0;
 		$field = "";
@@ -27,5 +26,24 @@
 		$sql = "INSERT INTO ".$table."(".$field.") VALUES(".$data_value.")";
 
 		return dbQuery($sql);
+	}
+
+	function dbUpdate($table,$data,$identity){
+		$total = count($data);
+		$no = 0;
+		$data_value = "";
+		foreach ($data as $key => $value) {
+			$no++;
+			if($no<$total){
+				$data_value .= $key."="."'".$data[$key]."'".",";
+			}
+			else{
+				$data_value .= $key."="."'".$data[$key]."'";	
+			}
+		}
+
+		$sql = "UPDATE ".$table." SET ".$data_value." WHERE ".$identity;
+
+		return $sql;
 	}
 ?>
