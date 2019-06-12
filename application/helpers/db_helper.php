@@ -6,6 +6,7 @@
 		return $query;
 	}
 
+	//for insert row in table, $data is array
 	function dbInsert($table,$data){
 		$total = count($data);
 		$no = 0;
@@ -28,6 +29,7 @@
 		return dbQuery($sql);
 	}
 
+	//for update row in table, $data is array and $identity like users_id = '1'
 	function dbUpdate($table,$data,$identity){
 		$total = count($data);
 		$no = 0;
@@ -44,6 +46,12 @@
 
 		$sql = "UPDATE ".$table." SET ".$data_value." WHERE ".$identity;
 
-		return $sql;
+		return dbQuery($sql);
+	}
+
+	//for delete row in table, $identity like users_id = '1'
+	function dbDelete($table,$identity){
+		$sql = "DELETE FROM ".$table." WHERE ".$identity;
+		return dbQuery($sql);
 	}
 ?>
