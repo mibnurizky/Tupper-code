@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>CodeIgniter Modifed by Mohamad Ibnu Rizky</title>
 
 	<style type="text/css">
 
@@ -68,16 +68,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1><b>Query</b></h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p>untuk <b>query basic</b> dapat langsung menggunakan method <b>dbQuery("your query string")</b>:</p>
+		<code>
+			$query = dbQuery("SELECT * FROM users");
+			<br/>
+			$query = dbQuery("SELECT * FROM users")->result(); //untuk mengambil data ke objeck query
+			<br/>
+			$query = dbQuery("SELECT * FROM users WHERE users_id = '1'")->row(); //digunakan untuk mengambil 1 baris data
+		</code>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+		<p>untuk <b>Insert Data</b> dapat menggunakan method <b>dbInsert("nama table",$data)</b>:</p>
+		<code>
+			$data['users_nama'] = "Mohamad Ibnu Rizky"; //users_nama adalah field atau kolom pada tabel anda<br/>
+			$data['users_alamat'] = "Surabaya"; //users_alamat adalah field atau kolom pada tabel anda<br/>
+			<br/>
+			dbInsert("users",$data);<br/>
+			<br/>
+			note: $data adalah array
+		</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
