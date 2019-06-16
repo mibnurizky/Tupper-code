@@ -21,16 +21,16 @@
 
 	function loadHelper($helper){
 		$ci = &get_instance();
-		$ci->load->helper($helper);
+		return $ci->load->helper($helper);
 	}
 
 	function loadHelpers($helper){
 		$ci = &get_instance();
-		$ci->load->helpers($helper);
+		return $ci->load->helpers($helper);
 	}
 
 	function loadlibrary($library){
 		$ci = &get_instance();
-		$ci->load->library($library);
+		return $ci->load->library($library);
 	}
 ?>
