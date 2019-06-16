@@ -28,4 +28,14 @@
 		$ci = &get_instance();
 		$ci->load->helpers($helper);
 	}
+
+	function inPost($name){
+		$ci = &get_instance();
+		return $ci->input->post($name);
+	}
+
+	function inGet($name){
+		$ci = $ci = &get_instance();
+		return $ci->input->get($name);
+	}
 ?>
