@@ -34,4 +34,12 @@
 			return $json;
 		}
 	}
+
+	function generateHash($text){
+		return password_hash($text, PASSWORD_BCRYPT);
+	}
+
+	function verifyHash($text,$hash){
+		return password_verify($text, $hash);
+	}
 ?>
