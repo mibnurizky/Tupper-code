@@ -42,4 +42,34 @@
 	function verifyHash($text,$hash){
 		return password_verify($text, $hash);
 	}
+
+	function setSession($arr_sess){
+		$ci = &get_instance();
+		$ci->session->set_userdata($arr_sess);
+	}
+
+	function getSession($name){
+		$ci = &get_instance();
+		return $ci->session->userdata($name);
+	}
+
+	function setNotification($name,$text){
+		$ci = &get_instance();
+		$ci->session->set_flashdata($name,$text);
+	}
+
+	function getNotification($name){
+		$ci = &get_instance();
+		return $ci->session->flashdata($name);
+	}
+
+	function inPost($name){
+		$ci = &get_instance();
+		return $ci->input->post($name);
+	}
+
+	function inGet($name){
+		$ci = $ci = &get_instance();
+		return $ci->input->get($name);
+	}
 ?>
