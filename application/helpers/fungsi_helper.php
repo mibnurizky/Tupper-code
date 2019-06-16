@@ -63,12 +63,12 @@
 		return $ci->session->flashdata($name);
 	}
 
-	function inPost($name){
+	function inPOST($name){
 		$ci = &get_instance();
 		return $ci->input->post($name);
 	}
 
-	function inGet($name){
+	function inGET($name){
 		$ci = $ci = &get_instance();
 		return $ci->input->get($name);
 	}
