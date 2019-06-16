@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>CodeIgniter Modifed by Mohamad Ibnu Rizky</title>
+	<title>Tupper Code Framework</title>
 
 	<style type="text/css">
 
@@ -68,32 +68,121 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1><b>Query</b></h1>
+	<h1><b>Tupper Code Framework</b></h1>
 
 	<div id="body">
-		<p>untuk <b>query basic</b> dapat langsung menggunakan method <b>dbQuery("your query string")</b>:</p>
-		<code>
-			$query = dbQuery("SELECT * FROM users");
-			<br/>
-			$query = dbQuery("SELECT * FROM users")->result(); //untuk mengambil data ke objeck query
-			<br/>
-			$query = dbQuery("SELECT * FROM users WHERE users_id = '1'")->row(); //digunakan untuk mengambil 1 baris data
-		</code>
+		<p>Tupper Code Framework adalah framework hasil modifikasi CodeIgniter. Tupper Code Framework dibuat oleh <b>Mohamad Ibnu Rizky</b></p>
 
-		<p>untuk <b>Insert Data</b> dapat menggunakan method <b>dbInsert("nama table",$data)</b>:</p>
-		<code>
-			$data['users_nama'] = "Mohamad Ibnu Rizky"; //users_nama adalah field atau kolom pada tabel anda<br/>
-			$data['users_alamat'] = "Surabaya"; //users_alamat adalah field atau kolom pada tabel anda<br/>
-			<br/>
-			dbInsert("users",$data);<br/>
-			<br/>
-			note: $data adalah array
-		</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<p>Format dari codeigniter tidak akan hilang, bisa dilihat di <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong> <br/>Tupper Code Framework <b>v0.1</b>' : '' ?></p>
+</div>
+
+<div id="container">
+	<h1><b>Fungsi Load</b></h1>
+
+	<div id="body">
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Load View</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						//view basic<br/>
+						loadView("your view");
+						<br/><br/>
+						//view with data<br/>
+						$this->data['user'];<br/>
+						loadView("your view");
+						<br/><br/>
+						//view with return true<br/>
+						loadView("your view",TRUE);
+					</code>
+				</td>
+				<td width="50%">
+					<code>
+						//view basic<br/>
+						$this->load->view("your view");
+						<br/><br/>
+						//view with data<br/>
+						$data['user'];<br/>
+						$this->load->view("your view",$data);
+						<br/><br/>
+						//view with return true<br/>
+						$this->load->view("your view",'',TRUE);
+					</code>
+				</td>
+			</tr>
+		</table>
+		<br/><br/>
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Load Model</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						//load model basic<br/>
+						loadModel("your model");
+						<br/><br/>
+						//load model with rename<br/>
+						loadModel("your model","new name");
+					</code>
+				</td>
+				<td width="50%">
+					<code>
+						//view basic<br/>
+						$this->load->model("your model");
+						<br/><br/>
+						//load model with rename<br/>
+						$this->load->model("your model","new name");
+					</code>
+				</td>
+			</tr>
+		</table>
+		<br/><br/>
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Load Model</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						//load model basic<br/>
+						loadModel("your model");
+						<br/><br/>
+						//load model with rename<br/>
+						loadModel("your model","new name");
+					</code>
+				</td>
+				<td width="50%">
+					<code>
+						//view basic<br/>
+						$this->load->model("your model");
+						<br/><br/>
+						//load model with rename<br/>
+						$this->load->model("your model","new name");
+					</code>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<p class="footer"></p>
 </div>
 
 </body>
