@@ -80,6 +80,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <div id="container">
+	<h1><b>Fungsi Base</b></h1>
+
+	<div id="body">
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Halaman utama (base)</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						base_url();
+					</code>
+				</td>
+				<td width="50%">
+					<code>
+						base_url();
+					</code>
+				</td>
+			</tr>
+		</table>
+		<br/><br/>
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Halaman utama assets</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						base_assets();
+					</code>
+				</td>
+				<td width="50%">
+					<code>
+						...
+					</code>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<p class="footer"></p>
+</div>
+
+<div id="container">
 	<h1><b>Fungsi Load</b></h1>
 
 	<div id="body">
@@ -153,7 +206,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<br/><br/>
 		<table width="100%" border="1">
 			<tr>
-				<td colspan="2"><b>Load Model</b></td>
+				<td colspan="2"><b>Load Helper</b></td>
 			</tr>
 			<tr>
 				<td><b>Tupper Code Framework</b></td>
@@ -162,20 +215,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<tr>
 				<td width="50%">
 					<code>
-						//load model basic<br/>
-						loadModel("your model");
+						//load helper basic<br/>
+						loadHelper("your helper name");
 						<br/><br/>
-						//load model with rename<br/>
-						loadModel("your model","new name");
+						//load many helper<br/>
+						loadHelpers(["helper 1","helper 2"]);
 					</code>
 				</td>
 				<td width="50%">
 					<code>
-						//view basic<br/>
-						$this->load->model("your model");
+						//load helper basic<br/>
+						$this->load->helper("your helper name");
 						<br/><br/>
-						//load model with rename<br/>
-						$this->load->model("your model","new name");
+						//load many helper<br/>
+						$this->load->helper(["helper 1","helper 2"]);
 					</code>
 				</td>
 			</tr>
