@@ -120,13 +120,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</code>
 				</td>
 				<td width="50%">
-					<code>
+					<!-- <code>
 						...
-					</code>
+					</code> -->
 				</td>
 			</tr>
 		</table>
-
+		<br/><br/>
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="2"><b>Halaman utama API</b></td>
+			</tr>
+			<tr>
+				<td><b>Tupper Code Framework</b></td>
+				<td><b>CodeIgniter Framework</b></td>
+			</tr>
+			<tr>
+				<td width="50%">
+					<code>
+						base_api(); //untuk mengambil url api yang telah disetting<br/>
+						api_key(); //untuk mengambil api key yang telah disimpan
+						<br/><br/>
+						note:
+						<br/>
+						url api terdapat di application/config/config.php<br/>
+						$config['api_url'] //digunakan untuk akses ke url api<br/>
+						$config['api_key'] //digunakan untuk menyimpan api key
+					</code>
+				</td>
+				<td width="50%">
+					<!-- <code>
+						...
+					</code> -->
+				</td>
+			</tr>
+		</table>
 	</div>
 
 	<p class="footer"></p>
