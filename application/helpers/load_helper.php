@@ -18,4 +18,14 @@
 			return $ci->load->view($view,$ci->data,$return);
 		}
 	}
+
+	function loadHelper($helper){
+		$ci = &get_instance();
+		$ci->load->helper($helper);
+	}
+
+	function loadHelpers($helper){
+		$ci = &get_instance();
+		$ci->load->helpers($helper);
+	}
 ?>
