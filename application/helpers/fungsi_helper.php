@@ -69,7 +69,12 @@
 	}
 
 	function inGET($name){
-		$ci = $ci = &get_instance();
+		$ci = &get_instance();
 		return $ci->input->get($name);
+	}
+
+	function dataView($index,$value){
+		$ci = &get_instance();
+		$ci->data[$index] = $value;
 	}
 ?>

@@ -6,12 +6,6 @@ class Welcome extends Core_Controller {
 		loadView('welcome_message');
 	}
 	public function form(){
-		if(isset($_POST['btn_input'])){
-			$nama = inPOST('nama');
-			echo $nama;
-		}
-		else{
-			loadView('form_v');
-		}
+		loadView("form_v");
 	}
 }
