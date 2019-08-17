@@ -23,11 +23,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+/*
+|-------------------------------------------------------------------------
+| Base URL dan Base API
+|-------------------------------------------------------------------------
+*/
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){
+    $link = "https"; 
+}
+else{
+    $link = "http"; 
+}
+
+$link .= "://"; 
+$link .= $_SERVER['HTTP_HOST'];
+$link .= $_SERVER['REQUEST_URI'];
+
+
+$config['base_url'] = $link;
 
 $config['api_url'] = '';
 
 $config['api_key'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| Database
+|--------------------------------------------------------------------------
+*/
+$config['db_dns'] = '';
+$config['db_hostname'] = 'localhost';
+$config['db_username'] = 'root';
+$config['db_password'] = '';
+$config['db_database'] = '';
+$config['db_dbdriver'] = 'mysqli';
 
 /*
 |--------------------------------------------------------------------------

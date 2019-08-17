@@ -1,6 +1,6 @@
 <?php
 	function base_assets($url = ''){
-		return base_url().'application/assets/'.$url;
+		return base_url().'assets/'.$url;
 	}
 	function base_api(){
 		$ci = &get_instance();
