@@ -38,7 +38,6 @@ else{
 
 $link .= "://"; 
 $link .= $_SERVER['HTTP_HOST'];
-$link .= $_SERVER['REQUEST_URI'];
 
 
 $config['base_url'] = $link;
@@ -46,6 +45,15 @@ $config['base_url'] = $link;
 $config['api_url'] = '';
 
 $config['api_key'] = '';
+
+
+/*
+|--------------------------------------------------------------------------
+| Setting App
+|--------------------------------------------------------------------------
+*/
+$config['app_name'] = 'Kanca POS';
+$config['app_name_summary'] = 'Kcp';
 
 /*
 |--------------------------------------------------------------------------
